@@ -19,19 +19,11 @@ class ServiceTypeExpander implements ServiceTypeExpanderInterface
      */
     protected ShipmentTypeServicePointToServicePointFacadeInterface $servicePointFacade;
 
-    /**
-     * @param \Spryker\Zed\ShipmentTypeServicePoint\Dependency\Facade\ShipmentTypeServicePointToServicePointFacadeInterface $servicePointFacade
-     */
     public function __construct(ShipmentTypeServicePointToServicePointFacadeInterface $servicePointFacade)
     {
         $this->servicePointFacade = $servicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeCollectionTransfer $shipmentTypeServiceTypeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeServiceTypeCollectionTransfer
-     */
     public function expandShipmentTypeServiceTypeCollection(
         ShipmentTypeServiceTypeCollectionTransfer $shipmentTypeServiceTypeCollectionTransfer
     ): ShipmentTypeServiceTypeCollectionTransfer {

@@ -24,10 +24,6 @@ class ShipmentTypeServiceTypeReader implements ShipmentTypeServiceTypeReaderInte
      */
     protected ServiceTypeExpanderInterface $serviceTypeExpander;
 
-    /**
-     * @param \Spryker\Zed\ShipmentTypeServicePoint\Persistence\ShipmentTypeServicePointRepositoryInterface $shipmentTypeServicePointRepository
-     * @param \Spryker\Zed\ShipmentTypeServicePoint\Business\Expander\ServiceTypeExpanderInterface $serviceTypeExpander
-     */
     public function __construct(
         ShipmentTypeServicePointRepositoryInterface $shipmentTypeServicePointRepository,
         ServiceTypeExpanderInterface $serviceTypeExpander
@@ -36,11 +32,6 @@ class ShipmentTypeServiceTypeReader implements ShipmentTypeServiceTypeReaderInte
         $this->serviceTypeExpander = $serviceTypeExpander;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeServiceTypeCollectionTransfer
-     */
     public function getShipmentTypeServiceTypeCollection(
         ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
     ): ShipmentTypeServiceTypeCollectionTransfer {

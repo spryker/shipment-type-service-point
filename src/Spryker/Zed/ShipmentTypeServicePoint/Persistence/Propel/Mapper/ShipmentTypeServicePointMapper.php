@@ -38,12 +38,6 @@ class ShipmentTypeServicePointMapper
         return $shipmentTypeServiceTypeCollectionTransfer;
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceType $shipmentTypeServiceTypeEntity
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeTransfer $shipmentTypeServiceTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeServiceTypeTransfer
-     */
     protected function mapShipmentTypeServiceTypeEntityToShipmentTypeServiceTypeTransfer(
         SpyShipmentTypeServiceType $shipmentTypeServiceTypeEntity,
         ShipmentTypeServiceTypeTransfer $shipmentTypeServiceTypeTransfer

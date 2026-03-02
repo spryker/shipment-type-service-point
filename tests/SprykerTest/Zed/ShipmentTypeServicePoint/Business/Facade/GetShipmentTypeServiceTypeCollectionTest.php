@@ -33,9 +33,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
      */
     protected ShipmentTypeServicePointBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -43,9 +40,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         $this->tester->ensureShipmentTypeServiceTypeTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsEmptyCollectionWhenDatabaseTableIsEmpty(): void
     {
         // Arrange
@@ -60,9 +54,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         $this->assertNull($shipmentTypeServiceTypeCollectionTransfer->getPagination());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionWithAllPersistedRelationships(): void
     {
         // Arrange
@@ -79,9 +70,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         $this->assertCount(2, $shipmentTypeServiceTypeCollectionTransfer->getShipmentTypeServiceTypes());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionFilteredByShipmentTypeIds(): void
     {
         // Arrange
@@ -112,9 +100,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionExpandedWithServiceTypeData(): void
     {
         // Arrange
@@ -141,9 +126,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionPaginatedByLimitAndOffset(): void
     {
         // Arrange
@@ -163,9 +145,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         $this->assertSame(3, $shipmentTypeServiceTypeCollectionTransfer->getPaginationOrFail()->getNbResults());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionPaginatedByPageAndMaxPerPage(): void
     {
         // Arrange
@@ -196,9 +175,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         $this->assertSame(1, $paginationTransfer->getPreviousPage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionSortedByFkShipmentTypeFieldDesc(): void
     {
         // Arrange
@@ -238,9 +214,6 @@ class GetShipmentTypeServiceTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsCollectionSortedByFkShipmentTypeFieldAsc(): void
     {
         // Arrange

@@ -25,11 +25,6 @@ class ShipmentTypeServicePointToServicePointFacadeBridge implements ShipmentType
         $this->servicePointFacade = $servicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeCriteriaTransfer $serviceTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeCollectionTransfer
-     */
     public function getServiceTypeCollection(ServiceTypeCriteriaTransfer $serviceTypeCriteriaTransfer): ServiceTypeCollectionTransfer
     {
         return $this->servicePointFacade->getServiceTypeCollection($serviceTypeCriteriaTransfer);

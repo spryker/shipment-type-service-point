@@ -21,9 +21,6 @@ use Spryker\Zed\ShipmentTypeServicePoint\ShipmentTypeServicePointDependencyProvi
  */
 class ShipmentTypeServicePointBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePoint\Business\Reader\ShipmentTypeServiceTypeReaderInterface
-     */
     public function createShipmentTypeServiceTypeReader(): ShipmentTypeServiceTypeReaderInterface
     {
         return new ShipmentTypeServiceTypeReader(
@@ -32,17 +29,11 @@ class ShipmentTypeServicePointBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePoint\Business\Expander\ServiceTypeExpanderInterface
-     */
     public function createServiceTypeExpander(): ServiceTypeExpanderInterface
     {
         return new ServiceTypeExpander($this->getServicePointFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePoint\Dependency\Facade\ShipmentTypeServicePointToServicePointFacadeInterface
-     */
     public function getServicePointFacade(): ShipmentTypeServicePointToServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ShipmentTypeServicePointDependencyProvider::FACADE_SERVICE_POINT);

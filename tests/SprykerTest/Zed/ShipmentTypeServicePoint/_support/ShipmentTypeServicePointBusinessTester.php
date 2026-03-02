@@ -33,9 +33,6 @@ class ShipmentTypeServicePointBusinessTester extends Actor
 {
     use _generated\ShipmentTypeServicePointBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureShipmentTypeServiceTypeTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getShipmentTypeServiceTypeQuery());
@@ -54,9 +51,6 @@ class ShipmentTypeServicePointBusinessTester extends Actor
         }
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     protected function getShipmentTypeServiceTypeQuery(): SpyShipmentTypeServiceTypeQuery
     {
         return SpyShipmentTypeServiceTypeQuery::create();

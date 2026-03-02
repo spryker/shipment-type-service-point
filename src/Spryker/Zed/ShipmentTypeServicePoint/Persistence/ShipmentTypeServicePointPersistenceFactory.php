@@ -17,17 +17,11 @@ use Spryker\Zed\ShipmentTypeServicePoint\Persistence\Propel\Mapper\ShipmentTypeS
  */
 class ShipmentTypeServicePointPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     public function createShipmentTypeServiceTypeQuery(): SpyShipmentTypeServiceTypeQuery
     {
         return SpyShipmentTypeServiceTypeQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePoint\Persistence\Propel\Mapper\ShipmentTypeServicePointMapper
-     */
     public function createShipmentTypeServicePointMapper(): ShipmentTypeServicePointMapper
     {
         return new ShipmentTypeServicePointMapper();

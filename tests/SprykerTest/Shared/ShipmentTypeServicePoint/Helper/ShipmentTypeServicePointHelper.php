@@ -17,12 +17,6 @@ class ShipmentTypeServicePointHelper extends Module
 {
     use DataCleanupHelperTrait;
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     * @param \Generated\Shared\Transfer\ServiceTypeTransfer $serviceTypeTransfer
-     *
-     * @return void
-     */
     public function haveShipmentTypeServiceTypeRelation(
         ShipmentTypeTransfer $shipmentTypeTransfer,
         ServiceTypeTransfer $serviceTypeTransfer
@@ -38,9 +32,6 @@ class ShipmentTypeServicePointHelper extends Module
         });
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     protected function getShipmentTypeServiceTypeQuery(): SpyShipmentTypeServiceTypeQuery
     {
         return SpyShipmentTypeServiceTypeQuery::create();

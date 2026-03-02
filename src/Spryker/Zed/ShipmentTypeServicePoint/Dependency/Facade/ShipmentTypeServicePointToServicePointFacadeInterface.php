@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\ServiceTypeCriteriaTransfer;
 
 interface ShipmentTypeServicePointToServicePointFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeCriteriaTransfer $serviceTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeCollectionTransfer
-     */
     public function getServiceTypeCollection(ServiceTypeCriteriaTransfer $serviceTypeCriteriaTransfer): ServiceTypeCollectionTransfer;
 }

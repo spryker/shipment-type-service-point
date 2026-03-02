@@ -20,11 +20,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractRepository;
  */
 class ShipmentTypeServicePointRepository extends AbstractRepository implements ShipmentTypeServicePointRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeServiceTypeCollectionTransfer
-     */
     public function getShipmentTypeServiceTypeCollection(
         ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
     ): ShipmentTypeServiceTypeCollectionTransfer {
@@ -53,12 +48,6 @@ class ShipmentTypeServicePointRepository extends AbstractRepository implements S
             );
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery $shipmentTypeServiceTypeQuery
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     protected function applyShipmentTypeServiceTypeFilters(
         SpyShipmentTypeServiceTypeQuery $shipmentTypeServiceTypeQuery,
         ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
@@ -75,12 +64,6 @@ class ShipmentTypeServicePointRepository extends AbstractRepository implements S
         return $shipmentTypeServiceTypeQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery $shipmentTypeServiceTypeQuery
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     protected function applyShipmentTypeServiceTypeSorting(
         SpyShipmentTypeServiceTypeQuery $shipmentTypeServiceTypeQuery,
         ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
@@ -96,12 +79,6 @@ class ShipmentTypeServicePointRepository extends AbstractRepository implements S
         return $shipmentTypeServiceTypeQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery $shipmentTypeServiceTypeQuery
-     * @param \Generated\Shared\Transfer\PaginationTransfer $paginationTransfer
-     *
-     * @return \Propel\Runtime\ActiveQuery\ModelCriteria
-     */
     protected function applyShipmentTypeServiceTypePagination(
         SpyShipmentTypeServiceTypeQuery $shipmentTypeServiceTypeQuery,
         PaginationTransfer $paginationTransfer
